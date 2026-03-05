@@ -1,223 +1,185 @@
 @charset "UTF-8";
-@media (max-width: 700px) {
+
+/* ===== MOBILE (< 768px) ===== */
+@media (max-width: 767px) {
+
+  /* --- Layout --- */
   .container {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    /* Ajoute un scroll vertical si le contenu dépasse la hauteur de l'écran */
     height: 100vh;
-    /* Définit la hauteur de l'élément parent sur 100% de la hauteur de la vue */
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
   }
 
-  .container .toggle {
-    display: block;
-  }
-  .content0
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    font-size: small;
-    
-  }
-    .container header output {
-    font-size: small;
-    margin-left: 7%;
-  }
-
-
-
-  #portfolio { 
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #portfolio .parent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #portfolio .parent div {
-    margin-bottom: 5%;
-  }
-
-  #article0 {
-    padding-top: 20%;
-  }
-
-  #article0 .hello,
-  #article0 .hello0,
-  #article0 .hello1,
-  #article0 .hello2,
-  #article0 .hello3 {
-    font-size: 10px;
-  }
-
-  aside img {
-    padding-top: 0;
-    width: 300px;
-  }
-
-  aside .hellobis {
-    font-size: 10px;
-  }
-
-  #nav li a {
-    font-size: 10px;
-  }
-
-  .nom {
-    font-size: 50px;
-  }
-
-  .fonction {
-    font-size: 20px;
-  }
-
-  .titre {
-    font-size: 10px;
-  }
-
-  #article2 #parcours {
-    display: block; /* affiché sur mobile */
-    font-size: 14px; /* adapter la taille */
-    padding: 10px; 
-  }
-
-/* Pour #article2 parcours - effet "hover" tactile sur mobile */
-#article2 #parcours li p {
-  display: none; /* caché par défaut */
-  color: #873F49;    /* ou la couleur que tu veux */
-  transition: all 0.3s ease;
-}
-
-/* Affiche le <p> au "tap" */
-#article2 #parcours li:active p,
-#article2 #parcours li:focus-within p {
-  display: block;
-}
-
-.cards,
-.cards2 {
-  margin-left: 0px !important;
-}
-
-  .cards .card-img,
-  .cards2 .card-img {
-    width: 250px;
-    height: 400px;
-    background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a20bc6324f6ef2969d9a7cae56b8d4d1&auto=format&fit=crop&w=1350&q=80);
-    background-position: 0 center;
-    background-size: cover;
-  }
-
-  .cards h3,
-  .cards2 h3 {
-    font-size: 1em;
-  }
-
-  .cards h4,
-  .cards2 h4 {
-    font-size: 1em;
-    padding-bottom: 5%;
-  }
-
-  .cards h5,
-  .cards2 h5 {
-    font-size: 1em;
-    padding-top: 5%;
-  }
-
-  .cards p,
-  .cards2 p {
-    font-size: 10px;
-  }
-  .cards2>a{
-    color: black;
-  }
-
-  /******************************************typewriter***********************************************************/
-  /* Animation */
-  .hello,
-  .hello0,
-  .hello1,
-  .hello2,
-  .hello3,
-  .hellobis {
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: "Source Code Pro", monospace;
-    color: black;
-  }
-
-  .parent div {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-
-  body#dark .switch {
-    padding: 1px;
-    background-color: white; 
-    height: 20px ;
-    width: 20px;
- 
-  }
-
-  body .switch {
-    padding: 1px;
-    background-color: black; 
-    height: 20px ;
-    width: 20px;
-  } 
-
-  .switch .mode {
-    font-size: 10px;
-    margin-top: 2px;
-    color: black;
-  }
-  #article0{
-    margin-top: 10%;
-  }
-}
-.switch {
-  display: flex;
-  flex-direction: row; /* alignement sur la même ligne */
-  align-items: center; /* aligne verticalement checkbox et texte */
-  gap: 5px; /* espace entre le bouton et le texte */
-  padding: 1px;
-  width: 20px;
-  height: 20px;
-  background-color: #873F49; /* couleur du switch (ou selon le thème via JS) */
-}
-
-.switch .mode {
-  font-size: 10px;
-  margin: 0;
-  color: black; /* ou blanc selon le thème */
-}
-
-br{
-  color:#873F49;
-}
- /* On affiche tout le texte de parcours directement */
-  #article2 #parcours li p {
+  .container::-webkit-scrollbar {
     display: none;
   }
 
-  /* Animation d’apparition douce en scroll */
-  #article2 #parcours li {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  .container > section {
+    flex-shrink: 0;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 70px 4% 50px;
+    box-sizing: border-box;
   }
 
-  /* Quand l’élément est visible dans la viewport */
-  #article2 #parcours li.visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* --- Hide custom cursor on touch --- */
+  .custom-cursor {
+    display: none;
   }
-  
-/*# sourceMappingURL=responsive_mobile.css.map */
+  body, a, button, label, input {
+    cursor: auto;
+  }
+
+  /* --- Header --- */
+  .content0 {
+    padding: 8px 15px;
+  }
+
+  .container header output {
+    font-size: small;
+  }
+
+  /* --- Toggle on mobile --- */
+  .toggle-switch {
+    cursor: auto;
+  }
+  .toggle-box {
+    width: 18px;
+    height: 30px;
+  }
+  .toggle-knob {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* --- Hamburger visible on mobile --- */
+  .hamburger {
+    display: flex;
+  }
+
+  /* --- Nav mobile overlay --- */
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
+  }
+
+  #nav.nav-open {
+    transform: translateX(0);
+  }
+
+  #nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  #nav ul li {
+    display: block;
+    padding: 0;
+  }
+
+  #nav ul li a {
+    color: #D6D6D6 !important;
+    font-size: 28px;
+    text-decoration: none;
+  }
+
+  /* --- Section principale : empilé --- */
+  #article0 {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  #article0::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .col-profil {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .col-skills {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  /* Tap to reveal on mobile */
+  .col-skills li {
+    cursor: pointer;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(135, 63, 73, 0.2);
+  }
+
+  .col-skills li p {
+    max-height: 0;
+    overflow: hidden;
+    color: #873F49;
+    transition: max-height 0.4s ease;
+  }
+
+  .col-skills li.open p {
+    max-height: 200px;
+    display: block;
+  }
+
+  /* --- Portfolio mobile --- */
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+  }
+
+  .portfolio-card {
+    padding: 1.5rem;
+  }
+
+  .portfolio-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.2em;
+  }
+
+  .portfolio-desc {
+    font-size: 0.75rem;
+  }
+
+  /* --- Footer section hidden, footer is fixed --- */
+  #article4 {
+    scroll-snap-align: none;
+    min-height: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}

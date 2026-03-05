@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio développeur fullstack junior - MENEN SZYMON">
+  <meta name="description" content="Portfolio développeuse full-stack - MENEN SZYMON">
 
   <!-- Fonts -->
   <style>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./assets/responsive_mobile.css">
 
 
-  <title>MENEN SZYMON | Développeuse Fullstack Junior</title>
+  <title>MENEN SZYMON | Développeuse Full-Stack</title>
 </head>
 
 
@@ -29,125 +29,155 @@
     <header class="content0" role="banner">
 
       <!-- Dark/Light mode toggle -->
-      <label class="switch">
-        <input type="checkbox" checked onchange="changeTheme();" id="input">
-        <span class="slider round desktop">mood</span>
-        <h3 class="mode"></h3>
-      </label>
-      <!-- Horloge -->
-      <div class="time1"><output>00:00:00</output></div>
+      <div class="header-left">
+        <label class="toggle-switch" aria-label="Changer de thème">
+          <input type="checkbox" checked onchange="changeTheme();" id="input">
+          <span class="toggle-box">
+            <span class="toggle-knob"></span>
+          </span>
+        </label>
+      </div>
       <!-- Navigation -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open'); document.getElementById('nav').classList.toggle('nav-open'); this.setAttribute('aria-expanded', this.classList.contains('open'));">
+        <span></span><span></span><span></span>
+      </button>
       <nav id="nav" role="navigation">
         <ul>
-          <li class="nav1"><a href="#article0">MENEN</a></li>
-          <li class="nav2"><a href="#article1">PROFIL</a></li>
-          <li class="nav3"><a href="#parcours">CV | RESUME</a></li>
+          <li class="nav1"><a href="#article0" onclick="closeNav()">MENEN</a></li>
+          <li class="nav2"><a href="#article3" onclick="closeNav()">PORTFOLIO</a></li>
         </ul>
       </nav>
 
 
     </header>
 
-    <!-- SECTION 0 : Intro -->
+    <!-- SECTION PRINCIPALE : Intro + Profil + Compétences -->
     <section id="article0">
-      <article>
-        <p class="hello">Hello world !</p>
-        <p class="hello0">Bienvenue sur mon site CV.</p>
-        <p class="hello3">Bonne visite !</p>
-        <h1 class="nom">MENEN SZYMON</h1>
-        <h3 class="fonction">Full-stack developer junior</h3>
-        <p class="hello">It works on my machine...</p>
-      </article>
-    </section>
+      <div class="main-layout">
 
-    <!-- SECTION 1 : Profil -->
-    <section id="article1">
-      <article>
-        <div class="about1 cards">
-          <h3 class="card">Profil</h3>
+        <!-- Colonne 1 : Intro -->
+        <div class="col-intro">
+          <div class="time1"><output>00:00:00</output></div>
+          <p class="hello">Hello world !</p>
+          <p class="hello0">Bienvenue sur mon site.</p>
+          <p class="hello3">Bonne visite !</p>
+          <h1 class="nom">MENEN SZYMON</h1>
+          <h3 class="fonction">Développeuse Full-Stack</h3>
+          <p class="hello">It works on my machine...</p>
+        </div>
+
+        <!-- Colonne 2 : Profil -->
+        <div class="col-profil">
+          <hr class="profil-hr">
           <p>
-            Développeuse full-stack (C#, Angular, TypeScript), j’ai acquis une solide expérience dans l’automatisation
-            et le développement d’applications. Après deux ans à consolider mes compétences techniques, je souhaite
-            aujourd’hui mettre ces acquis au service d’un projet où le domaine métier est aussi stimulant que la partie
-            technique.
-            Curieuse et adaptable, j’aime comprendre les besoins fonctionnels, traduire les enjeux business en solutions
-            concrètes et travailler dans un environnement collaboratif.
-            Mon objectif est de contribuer à des projets qui allient innovation technique et impact réel sur l’activité
-            de l’entreprise.
+            Autodidacte, multi-reconvertie. Production, management, événementiel — puis bootcamps, e-learning, et une formation intensive de 15 mois pour faire du code mon métier.
           </p>
           <p>
-            Curieuse et passionnée, je développe un intérêt pour la nouveauté et les tendances
-            technologiques (podcasts, veille informatique). En dehors du code : échecs, Go, jeux vidéo, art, musique,
-            nature, gastronomie font partie de mes passions.
+            Ce qui m’anime : l’équilibre parfait entre créativité, technicité et rigueur. Aujourd’hui développeuse full-stack C# / .NET & Angular, animatrice de workshops Green IT.
           </p>
           <p>
-            Mon parcours atypique m’a appris rigueur, créativité et adaptabilité. Je porte une attention particulière à
-            la qualité du code, aux bonnes pratiques, et au travail en équipe dans un environnement sain et stimulant.
+            Profil atypique, vision transversale, exécution technique.
           </p>
         </div>
-      </article>
-    </section>
 
-    <!-- SECTION 2 : Parcours / Compétences -->
-    <section id="article2">
-      <article id="parcours">
-
-        <div class="content3 columns">
-
-          <!--colonne 2 parcours fin⛔-->
-          <div class="about3 column">
-            <ul class="parcours">
-
-              <ul class="parcours">
-                <li class="csharp">
-                  <h4>C# / .NET / Blazor</h4>
-                  <p>2 ans d’expérience sur des applications web, APIs, projets full-stack et développement d’interfaces
-                    avec Blazor.</p>
-                </li>
-                <li class="angular">
-                  <h4>Angular</h4>
-                  <p>Développement frontend avec Angular, manipulation du DOM, et création d’interfaces modernes et
-                    réactives.</p>
-                </li>
-                <li class="java">
-                  <h4>Java</h4>
-                  <p>Développement d’applications backend robustes et maintenables, intégration avec des APIs et
-                    services web.</p>
-                </li>
-                <li class="ibm-brms">
-                  <h4>IBM BRMS</h4>
-                  <p>Conception et gestion de règles métier pour automatiser les décisions dans des applications
-                    complexes.</p>
-                </li>
-                <li class="html">
-                  <h4>HTML5 / CSS3 / SCSS</h4>
-                  <p>Structuration et mise en page de sites web, responsive design, et intégration avec des frameworks
-                    CSS.</p>
-                </li>
-                <li class="photoshop">
-                  <h4>Photoshop/Illustartor</h4>
-                  <p>Retouche et traitement d’images, gestion des formats, ajustement des niveaux et optimisation
-                    graphique.</p>
-                </li>
-                <li class="figma">
-                  <h4>Figma</h4>
-                  <p>Création de maquettes UI/UX, prototypes interactifs et collaboration design pour le web et les
-                    applications.</p>
-                </li>
-              </ul>
-              <h4>Telecharger cv ⬇ / Download cv ⬇</h4>
-              <div class="profil_link">
-                <a href="./assets/cv_FR_Menen_Szymon.pdf" download>CV FR <img src="./assets/pdf_icon.svg" alt="PDF"></a>
-                <a href="./assets/cv_EN_Menen_Szymon.pdf" download>CV EN <img src="./assets/pdf_icon.svg" alt="PDF"></a>
-              </div>
-          </div>
+        <!-- Colonne 3 : Compétences -->
+        <div class="col-skills" id="parcours">
+          <hr class="profil-hr">
+          <ul class="parcours">
+            <li class="csharp">
+              <h4>C# / .NET / Blazor</h4>
+              <p>Dev full-stack en poste : APIs, applications web, interfaces Blazor.</p>
+            </li>
+            <li class="angular">
+              <h4>Angular / TypeScript</h4>
+              <p>Développement frontend, interfaces modernes et réactives.</p>
+            </li>
+            <li class="devops">
+              <h4>DevOps / OpenShift</h4>
+              <p>Mission en cours : tests, CI/CD, conteneurisation.</p>
+            </li>
+            <li class="ibm-brms">
+              <h4>IBM BRMS</h4>
+              <p>Automatisation de règles métier dans des environnements complexes.</p>
+            </li>
+            <li class="greenit">
+              <h4>Green IT</h4>
+              <p>Animation de workshops sobriété numérique en entreprise.</p>
+            </li>
+            <li class="html">
+              <h4>HTML5 / CSS3 / SCSS</h4>
+              <p>Intégration web, responsive design, approche pixel-perfect.</p>
+            </li>
+            <li class="design">
+              <h4>Design / Figma / Photoshop</h4>
+              <p>Background graphiste : maquettes UI/UX, retouche, identité visuelle.</p>
+            </li>
+          </ul>
         </div>
-      </article>
+
+      </div>
     </section>
 
+    <!-- SECTION PORTFOLIO -->
     <section id="article3">
-      <article id="portfolio">
-      </article>
+      <div class="portfolio-layout">
+
+        <!-- Design System -->
+        <div class="portfolio-card" data-status="construction">
+          <div class="portfolio-icon icon-design-system">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="14" height="14" rx="2"/>
+              <rect x="22" y="4" width="14" height="8" rx="2"/>
+              <rect x="22" y="16" width="14" height="2" rx="1"/>
+              <circle cx="11" cy="30" r="7"/>
+              <rect x="22" y="22" width="14" height="14" rx="7"/>
+            </svg>
+          </div>
+          <h4 class="portfolio-title">Design System</h4>
+          <p class="portfolio-desc">Boutons, composants, SVG, tokens — bibliothèque UI réutilisable.</p>
+          <span class="portfolio-wip">// en construction</span>
+        </div>
+
+        <!-- Mini projets Frontend -->
+        <div class="portfolio-card" data-status="construction">
+          <div class="portfolio-icon icon-frontend">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="6" width="36" height="24" rx="2"/>
+              <line x1="2" y1="12" x2="38" y2="12"/>
+              <circle cx="6" cy="9" r="1.5"/>
+              <circle cx="11" cy="9" r="1.5"/>
+              <circle cx="16" cy="9" r="1.5"/>
+              <polyline points="12,20 8,24 12,28"/>
+              <polyline points="28,20 32,24 28,28"/>
+              <line x1="18" y1="18" x2="22" y2="30"/>
+              <line x1="10" y1="34" x2="30" y2="34"/>
+            </svg>
+          </div>
+          <h4 class="portfolio-title">Frontend</h4>
+          <p class="portfolio-desc">Landing pages, mini projets, intégrations — HTML, CSS, JS vanilla.</p>
+          <span class="portfolio-wip">// en construction</span>
+        </div>
+
+        <!-- Projets Full-Stack -->
+        <div class="portfolio-card" data-status="construction">
+          <div class="portfolio-icon icon-fullstack">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="8" y="2" width="24" height="16" rx="2"/>
+              <line x1="14" y1="7" x2="26" y2="7"/>
+              <line x1="14" y1="11" x2="22" y2="11"/>
+              <line x1="14" y1="15" x2="18" y2="15"/>
+              <path d="M20 18 L20 24"/>
+              <ellipse cx="20" cy="30" rx="14" ry="6"/>
+              <ellipse cx="20" cy="30" rx="14" ry="6" stroke-dasharray="3 3"/>
+              <path d="M6 30 L6 34 C6 37 12 40 20 40 C28 40 34 37 34 34 L34 30"/>
+            </svg>
+          </div>
+          <h4 class="portfolio-title">Full-Stack</h4>
+          <p class="portfolio-desc">Applications C# / .NET, Angular — APIs, bases de données, déploiement.</p>
+          <span class="portfolio-wip">// en construction</span>
+        </div>
+
+      </div>
     </section>
 
     <!-- SECTION 4 : CV et Contact -->
@@ -157,10 +187,32 @@
       <footer>
         <div class="marquee" aria-label="Bandeau d'informations">
           <div class="marquee__track" id="marqueeTrack" role="list">
-            <span class="marquee__item" role="listitem">• Développeuse Full-Stack • Automatisation • UX • Sobriété
-              numérique • Design graphique</span>
-            <span class="marquee__item" role="listitem">🎧 Veille technologique • Go, échecs , culture gaming • Art ,
-              musique sport de combat •</span>
+            <span class="marquee__item" role="listitem">[ C# ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
+            <span class="marquee__item" role="listitem">[ .NET ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
+            <span class="marquee__item" role="listitem">[ ANGULAR ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">--</span>
+            <span class="marquee__item" role="listitem">[ TYPESCRIPT ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
+            <span class="marquee__item" role="listitem">[ BLAZOR ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
+            <span class="marquee__item" role="listitem">[ DEVOPS ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">--</span>
+            <span class="marquee__item" role="listitem">[ OPENSHIFT ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
+            <span class="marquee__item" role="listitem">[ IBM BRMS ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
+            <span class="marquee__item" role="listitem">[ GREEN IT ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">--</span>
+            <span class="marquee__item" role="listitem">[ HTML5 ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
+            <span class="marquee__item" role="listitem">[ CSS3 ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
+            <span class="marquee__item" role="listitem">[ FIGMA ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">--</span>
+            <span class="marquee__item" role="listitem">[ PHOTOSHOP ]</span>
+            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
           </div>
         </div>
       </footer>
@@ -186,17 +238,34 @@
         track.dataset.duplicated = 'true';
       }
     })();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+    document.querySelectorAll('.col-skills li').forEach(el => {
+      el.addEventListener('click', () => el.classList.toggle('open'));
     });
-
-    document.querySelectorAll('#article2 #parcours li').forEach(el => observer.observe(el));
   </script> 
-  <script>document.body.classList.remove('no-js'); </script>
+  <script>
+    document.body.classList.remove('no-js');
+    function closeNav() {
+      document.getElementById('nav').classList.remove('nav-open');
+      document.querySelector('.hamburger').classList.remove('open');
+    }
+
+    // Custom cursor
+    (function() {
+      const cursor = document.createElement('div');
+      cursor.classList.add('custom-cursor');
+      document.body.appendChild(cursor);
+
+      document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+
+      document.querySelectorAll('a, button, label, .switch, .profil_link a').forEach(function(el) {
+        el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
+        el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
+      });
+    })();
+  </script>
 </body>
 
 </html>
