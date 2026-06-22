@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio développeuse full-stack - MENEN SZYMON">
+  <meta name="description" content="Full-stack developer portfolio — MENEN SZYMON">
 
   <!-- Fonts -->
   <style>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./assets/responsive_mobile.css">
 
 
-  <title>MENEN SZYMON | Développeuse Full-Stack</title>
+  <title>MENEN SZYMON | Full-Stack Developer</title>
 </head>
 
 
@@ -30,7 +30,7 @@
 
       <!-- Dark/Light mode toggle -->
       <div class="header-left">
-        <label class="toggle-switch" aria-label="Changer de thème">
+        <label class="toggle-switch" aria-label="Toggle theme">
           <input type="checkbox" checked onchange="changeTheme();" id="input">
           <span class="toggle-box">
             <span class="toggle-knob"></span>
@@ -44,6 +44,8 @@
       <nav id="nav" role="navigation">
         <ul>
           <li class="nav1"><a href="#article0" onclick="closeNav()">MENEN</a></li>
+          <li class="nav3"><a href="#article2" onclick="closeNav()">BLOG</a></li>
+          <li class="nav4"><a href="#cheatsheets" onclick="closeNav()">CHEATSHEETS</a></li>
           <li class="nav2"><a href="#article3" onclick="closeNav()">PORTFOLIO</a></li>
         </ul>
       </nav>
@@ -55,65 +57,96 @@
     <section id="article0">
       <div class="main-layout">
 
-        <!-- Colonne 1 : Intro -->
+        <!-- Column 1 : Intro -->
         <div class="col-intro">
           <div class="time1"><output>00:00:00</output></div>
           <p class="hello">Hello world !</p>
-          <p class="hello0">Bienvenue sur mon site.</p>
-          <p class="hello3">Bonne visite !</p>
+          <p class="hello0">Welcome to my site.</p>
+          <p class="hello3">Enjoy your stay !</p>
           <h1 class="nom">MENEN SZYMON</h1>
-          <h3 class="fonction">Développeuse Full-Stack</h3>
+          <h3 class="fonction">Full-Stack Developer</h3>
           <p class="hello">It works on my machine...</p>
         </div>
 
-        <!-- Colonne 2 : Profil -->
+        <!-- Column 2 : Profile -->
         <div class="col-profil">
           <hr class="profil-hr">
           <p>
-            Autodidacte, multi-reconvertie. Production, management, événementiel — puis bootcamps, e-learning, et une formation intensive de 15 mois pour faire du code mon métier.
+            Self-taught, career-changer. Production, management, live events — then bootcamps, e-learning, and a 15-month intensive program to turn code into my profession.
           </p>
           <p>
-            Ce qui m’anime : l’équilibre parfait entre créativité, technicité et rigueur. Aujourd’hui développeuse full-stack C# / .NET & Angular, animatrice de workshops Green IT.
+            What drives me: the balance between creativity, technical depth and rigor. Today a full-stack developer in C# / .NET and Angular — with a designer's background and an eye for the front. I also run Green IT workshops in companies.
           </p>
           <p>
-            Profil atypique, vision transversale, exécution technique.
+            Atypical profile, cross-functional thinking, technical execution.
           </p>
         </div>
 
-        <!-- Colonne 3 : Compétences -->
+        <!-- Column 3 : Skills -->
         <div class="col-skills" id="parcours">
           <hr class="profil-hr">
           <ul class="parcours">
             <li class="csharp">
               <h4>C# / .NET / Blazor</h4>
-              <p>Dev full-stack en poste : APIs, applications web, interfaces Blazor.</p>
+              <p>Full-stack dev at work: APIs, web applications, Blazor interfaces.</p>
             </li>
             <li class="angular">
               <h4>Angular / TypeScript</h4>
-              <p>Développement frontend, interfaces modernes et réactives.</p>
+              <p>Modern, reactive frontends — components, state, clean structure.</p>
             </li>
             <li class="devops">
-              <h4>DevOps / OpenShift</h4>
-              <p>Mission en cours : tests, CI/CD, conteneurisation.</p>
+              <h4>DevOps / CI-CD</h4>
+              <p>6-month mission on manual testing, CI/CD pipelines and containerization. Hands-on, technical, fun.</p>
             </li>
             <li class="ibm-brms">
               <h4>IBM BRMS</h4>
-              <p>Automatisation de règles métier dans des environnements complexes.</p>
+              <p>Business rules automation in complex enterprise environments.</p>
             </li>
             <li class="greenit">
               <h4>Green IT</h4>
-              <p>Animation de workshops sobriété numérique en entreprise.</p>
+              <p>Running digital-sobriety workshops in companies.</p>
             </li>
             <li class="html">
               <h4>HTML5 / CSS3 / SCSS</h4>
-              <p>Intégration web, responsive design, approche pixel-perfect.</p>
+              <p>Web integration, responsive design, pixel-perfect attention.</p>
             </li>
             <li class="design">
               <h4>Design / Figma / Photoshop</h4>
-              <p>Background graphiste : maquettes UI/UX, retouche, identité visuelle.</p>
+              <p>Graphic design background: UI/UX mockups, retouching, visual identity.</p>
             </li>
           </ul>
         </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION BLOG : 10/2 things about... (contenu chargé par blog.js) -->
+    <section id="article2" class="blog-section">
+      <div class="blog-layout">
+
+        <!-- Colonne calendrier (structure statique, mois remplis par blog.js) -->
+        <aside class="blog-calendar" aria-label="Calendrier des articles">
+          <h2 class="blog-title">
+            <span class="blog-title__line">10/2 THINGS</span>
+            <span class="blog-title__line blog-title__line--accent">ABOUT…</span>
+          </h2>
+          <p class="blog-subtitle">// one post per month</p>
+          <p class="blog-disclaimer">// not a course. just what I see from here.</p>
+
+          <div class="blog-year-nav" id="blog-year-nav"></div>
+          <ul class="blog-months" id="blog-months" role="list"></ul>
+
+          <p class="blog-legend">
+            <span class="blog-legend__dot blog-legend__dot--current"></span> current month
+            <br>
+            <span class="blog-legend__dot blog-legend__dot--published"></span> published post
+          </p>
+
+          <ul class="blog-postslist" id="blog-postslist" role="list"></ul>
+        </aside>
+
+        <!-- Colonne articles (remplie par blog.js, inclut le hint "next post" en bas) -->
+        <div class="blog-articles" id="blog-articles"></div>
 
       </div>
     </section>
@@ -134,11 +167,11 @@
             </svg>
           </div>
           <h4 class="portfolio-title">Design System</h4>
-          <p class="portfolio-desc">Boutons, composants, SVG, tokens — bibliothèque UI réutilisable.</p>
-          <span class="portfolio-wip">// en construction</span>
+          <p class="portfolio-desc">Buttons, components, SVG, tokens — a reusable UI library.</p>
+          <span class="portfolio-wip">// in progress</span>
         </div>
 
-        <!-- Mini projets Frontend -->
+        <!-- Frontend -->
         <div class="portfolio-card" data-status="active">
           <div class="portfolio-icon icon-frontend">
             <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -154,20 +187,13 @@
             </svg>
           </div>
           <h4 class="portfolio-title">Frontend</h4>
-          <p class="portfolio-desc">Landing pages, mini projets, intégrations — HTML, CSS, JS vanilla.</p>
+          <p class="portfolio-desc">Landing pages, integrations, and a date-scheduled blog — HTML, CSS, vanilla JS.</p>
           <div class="portfolio-projects">
-            <a href="https://simonemenou.github.io/poeme-cabine/" target="_blank" class="portfolio-link">
-              <span class="portfolio-link-name">Poème Cabine</span>
-              <span class="portfolio-link-tech">JS vanilla</span>
+            <a href="#article2" class="portfolio-link">
+              <span class="portfolio-link-name">10/2 things — scheduled blog</span>
+              <span class="portfolio-link-tech">vanilla JS // live demo</span>
             </a>
-            <a href="https://simonemenou.github.io/rock-n-love/" target="_blank" class="portfolio-link">
-              <span class="portfolio-link-name">Rock'n Love</span>
-              <span class="portfolio-link-tech">HTML / CSS / JS vanilla</span>
-            </a>
-            <a href="https://simonemenou.github.io/bonjour-bonne-nuit/" target="_blank" class="portfolio-link">
-              <span class="portfolio-link-name">Bonjour / Bonne Nuit</span>
-              <span class="portfolio-link-tech">CSS only</span>
-            </a>
+            <p class="portfolio-note">// triggered by today's date on each load: past posts are unlocked, upcoming ones stay locked until their day — pure vanilla JS, no backend.</p>
           </div>
         </div>
 
@@ -186,8 +212,8 @@
             </svg>
           </div>
           <h4 class="portfolio-title">Full-Stack</h4>
-          <p class="portfolio-desc">Applications C# / .NET, Angular — APIs, bases de données, déploiement.</p>
-          <span class="portfolio-wip">// en construction</span>
+          <p class="portfolio-desc">C# / .NET and Angular apps — APIs, databases, deployment.</p>
+          <span class="portfolio-wip">// in progress</span>
         </div>
 
       </div>
@@ -212,8 +238,6 @@
             <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
             <span class="marquee__item" role="listitem">[ DEVOPS ]</span>
             <span class="marquee__item marquee__sep" aria-hidden="true">--</span>
-            <span class="marquee__item" role="listitem">[ OPENSHIFT ]</span>
-            <span class="marquee__item marquee__sep" aria-hidden="true">//</span>
             <span class="marquee__item" role="listitem">[ IBM BRMS ]</span>
             <span class="marquee__item marquee__sep" aria-hidden="true">&lt;/&gt;</span>
             <span class="marquee__item" role="listitem">[ GREEN IT ]</span>
@@ -236,6 +260,8 @@
   <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
   <script src="./time.js"></script>
   <script src="./toogle.js"></script>
+  <script src="./blog/posts.js"></script>
+  <script src="./blog/blog.js"></script>
 
 
   <script>

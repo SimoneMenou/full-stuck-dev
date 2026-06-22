@@ -1,0 +1,20 @@
+<article id="blog-2026-10" class="blog-post">
+  <header class="blog-post__head">
+    <time datetime="2026-10" class="blog-post__date">OCT 2026</time>
+    <span class="blog-post__tag">— things I love-hate</span>
+  </header>
+  <h3 class="blog-post__title">10/2 things I love-hate about security</h3>
+  <p class="blog-post__intro">
+    Halloween edition. One year I went dressed as HTML code: header, body, footer. A jealous coworker said he should've come as a data center. The next year I handed out troll masks. Masks really do come everywhere this month: at parties, on networks (subnet, hi), and in the code we ship without quite knowing what's underneath. Here's the dev's love-hate with the ones that stay on.
+  </p>
+  <ol class="blog-post__list">
+    <li><strong>The library trust contract.</strong> Every npm install is a small act of faith in maintainers you'll never meet. Most of the time it works. Sometimes a package gets hijacked, a dependency turns malicious, a tiny script with millions of downloads quietly leaks credentials. The supply chain became the attack surface.</li>
+    <li><strong>Without active watch, everything looks like a threat.</strong> Copilot suggestions feel too smart. Chat features ship with permissions you didn't know existed. Tools update overnight. If you're not actively reading security news, and it's not your day job, the paranoia kicks in. You learn to be cautious. You also learn caution has a price.</li>
+    <li><strong>The acronyms parade, blessedly stable.</strong> XSS, CSRF, CORS, JWT, OAuth. You google them again, still. But here's the silver lining: these acronyms are more stable than Angular's API. They were here in 2010, they'll be here in 2030. At least the threats stay still long enough to learn.</li>
+    <li><strong>Security fixes outlast your code.</strong> Three years later, your codebase is unrecognizable. But the password hashing scheme, the CORS config, the CSP headers? They survive every refactor. You learn to write the security part more carefully than the code itself.</li>
+    <li><strong>The friction tax.</strong> Password managers, 2FA prompts, VPN to access prod, hardware keys, biometric checks. Each one keeps you safe. Each one also slows your morning. Multiply by 365 days. The math gets honest.</li>
+  </ol>
+  <p class="blog-post__outro">
+    Security is the field where a little paranoia is just professionalism. Less, the world breaks. More, nothing ships. The middle is where you live, and it moves every quarter.
+  </p>
+</article>
