@@ -219,6 +219,51 @@
       </div>
     </section>
 
+    <!-- SECTION CHEATSHEETS -->
+    <section id="cheatsheets" class="cheatsheets-section">
+      <div class="cheatsheets-head">
+        <h2 class="cheatsheets-title">
+          <span class="cheatsheets-title__line">CHEAT</span>
+          <span class="cheatsheets-title__line cheatsheets-title__line--accent">SHEETS</span>
+        </h2>
+        <p class="cheatsheets-subtitle">// quick references I actually use</p>
+      </div>
+
+      <div class="cheatsheets-grid">
+
+        <!-- Carte : JavaScript (vanilla — issu du blog) -->
+        <article class="cheatsheet-card">
+          <header class="cheatsheet-card__head">
+            <h3 class="cheatsheet-card__title">JavaScript</h3>
+            <span class="cheatsheet-card__tag">// vanilla — from the blog</span>
+          </header>
+          <div class="cheatsheet-card__body">
+            <p class="cheat-note">A Promise = a "ticket" for a result that isn't ready yet.</p>
+            <pre class="cheat-code">pending  →  fulfilled (value)
+         →  rejected  (error)</pre>
+
+            <p class="cheat-label">// read it — old way</p>
+            <pre class="cheat-code">fetch(url)
+  .then(r => r.text())
+  .catch(err => ...)</pre>
+
+            <p class="cheat-label">// read it — modern</p>
+            <pre class="cheat-code">async function f() {
+  try {
+    const r = await fetch(url);
+    const t = await r.text();
+  } catch (err) { ... }
+}</pre>
+
+            <p class="cheat-label">// run in parallel</p>
+            <pre class="cheat-code">await Promise.all([p1, p2, p3])
+// waits for ALL ≈ slowest one</pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- SECTION 4 : CV et Contact -->
     <section id="article4">
 
