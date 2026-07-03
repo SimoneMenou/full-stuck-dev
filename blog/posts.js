@@ -59,7 +59,7 @@ window.BLOG_POSTS = [
     year: 2026,
     month: 8,
     publishDate: '2026-08-01',
-    title: '10/2 things I hate about becoming a dev',
+    title: '10/2 things I hate about AI in dev',
     tag: 'things I hate'
   },
   {
@@ -67,8 +67,8 @@ window.BLOG_POSTS = [
     year: 2026,
     month: 7,
     publishDate: '2026-07-01',
-    title: '10/2 things I love about LinkedIn',
-    tag: 'things I love'
+    title: '10/2 things I hate about becoming a dev',
+    tag: 'things I hate'
   },
   {
     slug: '2026-06',
