@@ -1,4 +1,3 @@
-// 1. je vais identifier ma balise ou l'heure devra apparaître ce sera tjs celle de Belgique #const
 const localisation = document.querySelector("div.time1");
 
 
