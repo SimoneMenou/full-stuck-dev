@@ -199,7 +199,7 @@
               <span class="portfolio-link-name">SVG gen art — plates 01–05</span>
               <span class="portfolio-link-tech">SVG // in progress</span>
             </a>
-            <p class="portfolio-note">// creative SVG: shapes written as coordinates and colour values instead of drawn by hand.</p>
+            <p class="portfolio-note">// SVG: a drawing written as markup — coordinates, radii, hex.</p>
           </div>
         </div>
 
@@ -264,6 +264,35 @@
             <p class="cheat-label">// run in parallel</p>
             <pre class="cheat-code">await Promise.all([p1, p2, p3])
 // waits for ALL ≈ slowest one</pre>
+          </div>
+        </article>
+
+        <!-- Carte : SVG -->
+        <article class="cheatsheet-card">
+          <header class="cheatsheet-card__head">
+            <h3 class="cheatsheet-card__title">SVG</h3>
+            <span class="cheatsheet-card__tag">// from the gen-art plates</span>
+          </header>
+          <div class="cheatsheet-card__body">
+            <p class="cheat-note">A drawing written as markup. The browser reads it like HTML, and it stays sharp at any size.</p>
+
+            <p class="cheat-label">// viewBox sets the coordinate system</p>
+            <pre class="cheat-code">&lt;svg viewBox="0 0 500 500"&gt;
+// 0,0   = top left
+// 500,500 = bottom right</pre>
+
+            <p class="cheat-label">// a circle = a centre, a radius, a fill</p>
+            <pre class="cheat-code">&lt;circle cx="250" cy="250" r="125"
+        fill="#873F49" /&gt;</pre>
+
+            <p class="cheat-label">// the others work the same way</p>
+            <pre class="cheat-code">&lt;rect  x y width height&gt;
+&lt;line  x1 y1 x2 y2&gt;
+&lt;path  d="M0 0 L10 10 Z"&gt;</pre>
+
+            <p class="cheat-label">// order = stacking, last one on top</p>
+            <pre class="cheat-code">opacity="0.5"  // see through
+fill="none" stroke="currentColor"</pre>
           </div>
         </article>
 

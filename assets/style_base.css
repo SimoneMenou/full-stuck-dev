@@ -664,9 +664,14 @@ body#dark .portfolio-link {
   border-top: 1px solid rgba(135, 63, 73, 0.25);
   padding: 4rem 2rem;
   min-height: 100vh;
+  /* `.container > section` est un flex en ligne : sans ca le titre et la
+     grille se placent cote a cote des qu'il y a plus d'une carte. */
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .cheatsheets-head {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto 2.5rem;
 }
@@ -693,6 +698,7 @@ body#dark .portfolio-link {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 360px));
   gap: 1.5rem;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
